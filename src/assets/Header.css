@@ -1,0 +1,17 @@
+.mainIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+
+
+
+}
+
+.bgHeder {
+  width: 100%;
+  position: sticky;
+
+}

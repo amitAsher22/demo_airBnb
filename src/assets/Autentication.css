@@ -1,0 +1,65 @@
+.MainDivAutentication {
+  width: 100px;
+  border: 1px solid rgb(139, 137, 137);
+  border-radius: 22px;
+  box-shadow: 1px 3px 8px rgba(161, 161, 161, 0.5);
+  transition: border-color 0.3s ease;
+  z-index: 999;
+
+}
+
+.MainDivAutentication:hover {
+  cursor: pointer;
+  
+}
+
+.circleAutentication {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconAutentication {
+  font-size: 1.8rem;
+}
+
+.fatherDivAutentication {
+  position: absolute;
+  background-color:red;
+  z-index:-1
+
+}
+
+.sonDivAutentication {
+  /* position: relative; */
+  /* background-color: rgb(255, 255, 255); */
+  box-shadow: 1px 3px 8px rgba(161, 161, 161, 0.5);
+  top: 0.5rem;
+  left: 0.7rem;
+  z-index: 999;
+  width: 19vw;
+  height: 20vw;
+  border-radius: 11px;
+
+}
+
+.listAutentication {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 90%;
+  text-align: right;
+  padding: 1rem;
+  border-radius: 22px;
+}
+
+.listUpAutentation {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: space-around;
+
+  border-bottom: 1px solid rgb(57, 54, 54);
+}
