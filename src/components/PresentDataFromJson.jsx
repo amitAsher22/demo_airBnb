@@ -6,51 +6,25 @@ import "swiper/swiper-bundle.min.css"; // ייבוא סגנונות Swiper
 import { Pagination } from "swiper"; // ניווט באמצעות נקודות
 import "../style/PresentDataFromJson.css";
 import information from "../../public/data.json";
-
-// מערך נתונים לדוגמה
-// const data = [
-//   {
-//     images: [
-//       "https://images.pexels.com/photos/14142284/pexels-photo-14142284.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-//       "https://images.pexels.com/photos/19264436/pexels-photo-19264436/free-photo-of-two-young-fashionable-women-standing-in-front-of-a-crowd.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-//     ],
-//     title: "מוצר 1",
-//     price: "₪100",
-//   },
-//   {
-//     images: [
-//       "https://images.pexels.com/photos/20817755/pexels-photo-20817755/free-photo-of-studio-shot-of-a-young-woman-wearing-a-black-dress-and-a-black-coat.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-//       "https://images.pexels.com/photos/14208346/pexels-photo-14208346.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-//     ],
-//     title: "מוצר 2",
-//     price: "₪200",
-//   },
-//   {
-//     images: [
-//       "https://via.placeholder.com/150/800080",
-//       "https://via.placeholder.com/150/FFA500",
-//     ],
-//     title: "מוצר 3",
-//     price: "₪300",
-//   },
-//   {
-//     images: [
-//       "https://via.placeholder.com/150/800080",
-//       "https://via.placeholder.com/150/FFA500",
-//     ],
-//     title: "מוצר 3",
-//     price: "₪300",
-//   },
-// ];
+import { IoMdHeartEmpty } from "react-icons/io";
+import { FcLike } from "react-icons/fc";
 
 const PresentDataFromJson = () => {
   const [data, setData] = useState([]);
+  const [like, setLike] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     setData(information);
   }, []);
 
-  console.log(data);
+  const toggleLike = (id) => {
+    setData((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, like: !item.like } : item
+      )
+    );
+  };
 
   return (
     <div className="card-container">
@@ -66,13 +40,33 @@ const PresentDataFromJson = () => {
             spaceBetween={5} // רווח בין תמונות
             slidesPerView={1} // הצגת תמונה אחת בכל פעם
           >
-            {item.image.map((image, idx) => (
-              <SwiperSlide key={idx}>
-                <img src={image} alt={`Slide ${idx}`} className="card-image" />
+            {item.image.map((image, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={image}
+                  alt={`Slide ${index}`}
+                  className="card-image"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
           <div className="card-info">
+            {/* {toggle ? (
+              <IoMdHeartEmpty
+                onClick={() => changeLike(index)}
+                className={like === index ? "hidden" : "show"}
+              />
+            ) : (
+              <FcLike
+                onClick={() => changeLike(index)}
+                className={index === item.id ? "show" : "show"}
+              />
+            )} */}
+
+            <span onClick={() => toggleLike(item.id)}>
+              {item.like ? "❤️" : "🤍"}
+            </span>
+
             <h3 className="card-title">{item.title}</h3>
             <p className="card-price">{item.price}</p>
           </div>

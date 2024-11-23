@@ -1,6 +1,6 @@
 /* קונטיינר כללי */
 .card-container {
-  position:absolute;
+  position: absolute;
   display: flex;
   flex-direction: row;
   /* גלישה לשורות נוספות */
@@ -67,4 +67,12 @@
 
 .swiper-pagination-bullet-active {
   background-color: #ffffff;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

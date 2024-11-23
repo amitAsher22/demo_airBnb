@@ -12,11 +12,11 @@
     "startDate": "2024-11-20",
     "endDate": "2025-10-10",
     "price": 400,
-    "iconLove": true,
     "guests": 3,
     "bedrooms": 1,
     "beds": 2,
-    "Bathrooms": 1
+    "Bathrooms": 1,
+    "like": false
   },
   {
     "id": 2,
@@ -31,10 +31,29 @@
     "startDate": "2024-09-4",
     "endDate": "2025-02-8",
     "price": 200,
-    "iconLove": false,
     "guests": 2,
     "bedrooms": 2,
     "beds": 1,
-    "Bathrooms": 1
+    "Bathrooms": 1,
+    "like": false
+  },
+  {
+    "id": 3,
+    "title": "חווית לינה ייחודית בירושלים",
+    "city": "ירושלים",
+    "image": [
+      "https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXJsfGVufDB8fDB8fHww",
+      "https://images.pexels.com/photos/29410753/pexels-photo-29410753/free-photo-of-scenic-colonial-mansion-with-palm-trees.jpeg"
+    ],
+    "description": "דירה מרוהטת ומעוצבת בלב ירושלים",
+    "rating": 5,
+    "startDate": "2024-09-4",
+    "endDate": "2025-02-8",
+    "price": 200,
+    "guests": 2,
+    "bedrooms": 2,
+    "beds": 1,
+    "Bathrooms": 1,
+    "like": false
   }
 ]

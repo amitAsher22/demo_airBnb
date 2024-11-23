@@ -10,7 +10,7 @@
 
 .MainDivAutentication:hover {
   cursor: pointer;
-  
+
 }
 
 .circleAutentication {
@@ -26,9 +26,8 @@
 
 .fatherDivAutentication {
   position: absolute;
-  background-color:red;
-  z-index:-1
 
+  z-index: -1
 }
 
 .sonDivAutentication {

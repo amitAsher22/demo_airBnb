@@ -1,0 +1,26 @@
+[
+  {
+    "icon": ".././src/assets/board.png",
+    "title": "אייקונים"
+  },
+  {
+    "icon": ".././src/assets/cabin.png",
+    "title": "בקתות"
+  },
+  {
+    "icon": ".././src/assets/beach.png",
+    "title": "איים"
+  },
+  {
+    "icon": ".././src/assets/mansion.png",
+    "title": "אחוזות"
+  },
+  {
+    "icon": ".././src/assets/container.png",
+    "title": "מכולות"
+  },
+  {
+    "icon": ".././src/assets/view.png",
+    "title": "נופים מדהימים"
+  }
+]

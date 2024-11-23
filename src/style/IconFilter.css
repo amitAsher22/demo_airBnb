@@ -1,0 +1,20 @@
+.iconsDiv {
+  display: flex;
+  padding: 2rem 0px;
+  width: 100%;
+}
+
+.iconFilter {
+
+  width: 100px;
+
+}
+
+.imgFilter {
+  width: 100%;
+}
+
+.sizeDiv {
+  width: 30px;
+  height: 40px;
+}
