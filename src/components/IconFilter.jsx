@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import filterData from "../../public/filters.json";
 import "../style/IconFilter.css";
+import { MyContext } from "../App";
+import information from "../../public/data.json";
 
 function IconFilter() {
-  const [data, setData] = useState([]);
+  const { datat, setInfoata, setInfoData } = useContext(MyContext);
 
-  useEffect(() => {
-    setData(filterData);
-  }, []);
+  const FilteByName = (filterName) => {
+    let resultNewArry = information.filter(
+      (prvent) => prvent.category === filterName
+    );
 
+    setInfoData(resultNewArry);
+  };
   return (
     <div className="iconsDiv">
-      {data.map((item, index) => {
+      {datat.map((item, index) => {
         return (
           <div key={index} className="iconFilter">
-            <div className="sizeDiv">
+            <div className="sizeDiv" onClick={() => FilteByName(item.title)}>
               <div>
                 <img src={item.icon} alt={"index"} className="imgFilter" />
               </div>
-              <span>{item.title}</span>
+              <span value={item.title}>{item.title}</span>
             </div>
           </div>
         );

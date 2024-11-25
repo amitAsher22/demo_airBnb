@@ -1,25 +1,28 @@
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css"; // ייבוא סגנונות Swiper
 import { Pagination } from "swiper"; // ניווט באמצעות נקודות
 import "../style/PresentDataFromJson.css";
-import information from "../../public/data.json";
+// import information from "../../public/data.json";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FcLike } from "react-icons/fc";
+import { MyContext } from "../App";
 
 const PresentDataFromJson = () => {
-  const [data, setData] = useState([]);
+  const { datat, setInfoata, infoData, setInfoData, setNameFilter } =
+    useContext(MyContext);
+
   const [like, setLike] = useState(null);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    setData(information);
+    setInfoData(infoData);
   }, []);
 
   const toggleLike = (id) => {
-    setData((prevItems) =>
+    setInfoData((prevItems) =>
       prevItems.map((item) =>
         item.id === id ? { ...item, like: !item.like } : item
       )
@@ -28,17 +31,17 @@ const PresentDataFromJson = () => {
 
   return (
     <div className="card-container">
-      {data.map((item, index) => (
+      {infoData.map((item, index) => (
         <div className="card" key={index}>
           <Swiper
             modules={[Pagination]}
             loop={false}
             pagination={{
-              clickable: true, // נקודות לחיצות
-              type: "bullets", // נקודות ניווט
+              clickable: true,
+              type: "bullets",
             }}
-            spaceBetween={5} // רווח בין תמונות
-            slidesPerView={1} // הצגת תמונה אחת בכל פעם
+            spaceBetween={5}
+            slidesPerView={1}
           >
             {item.image.map((image, index) => (
               <SwiperSlide key={index}>
@@ -51,20 +54,8 @@ const PresentDataFromJson = () => {
             ))}
           </Swiper>
           <div className="card-info">
-            {/* {toggle ? (
-              <IoMdHeartEmpty
-                onClick={() => changeLike(index)}
-                className={like === index ? "hidden" : "show"}
-              />
-            ) : (
-              <FcLike
-                onClick={() => changeLike(index)}
-                className={index === item.id ? "show" : "show"}
-              />
-            )} */}
-
             <span onClick={() => toggleLike(item.id)}>
-              {item.like ? "❤️" : "🤍"}
+              {item.like ? <FcLike /> : <IoMdHeartEmpty />}
             </span>
 
             <h3 className="card-title">{item.title}</h3>

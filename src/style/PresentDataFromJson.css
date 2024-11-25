@@ -3,16 +3,16 @@
   position: absolute;
   display: flex;
   flex-direction: row;
-  /* גלישה לשורות נוספות */
+  flex-wrap: wrap;
   gap: 10px;
-  /* רווח בין כרטיסיות */
+
   justify-content: center;
   text-align: right;
   z-index: -2;
 
 }
 
-/* כרטיסיה בודדת */
+
 .card {
   width: 300px;
   /* רוחב כרטיסיה */
