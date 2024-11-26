@@ -27,15 +27,13 @@
 .fatherDivAutentication {
   position: absolute;
 
-  z-index: -1
+
 }
 
 .sonDivAutentication {
-  /* position: relative; */
-  /* background-color: rgb(255, 255, 255); */
+  position: absolute;
   box-shadow: 1px 3px 8px rgba(161, 161, 161, 0.5);
-  top: 0.5rem;
-  left: 0.7rem;
+
   z-index: 999;
   width: 19vw;
   height: 20vw;

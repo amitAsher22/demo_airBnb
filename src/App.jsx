@@ -10,6 +10,7 @@ import "./assets/App.css";
 import data from ".././public/data.json";
 import daataFilter from ".././public/filters.json";
 import information from ".././public/data.json";
+// import DataProvider, { DataContext } from "./contexts/DataContext";
 
 export const MyContext = createContext();
 function App() {
