@@ -14,17 +14,22 @@ export const useData = () => {
 
 // קומפוננטת Provider שמספקת את הנתונים לכל הילדים
 export const DataProvider = ({ children }) => {
-  const [datat, setInfoata] = useState(FilterData);
-  const [infoData, setInfoData] = useState(FilterData);
+  const [datatNew, setInfoata] = useState(FullData);
+  const [filterData, setFilterData] = useState(FilterData);
   const [nameFilter, setNameFilter] = useState("");
+
+  // useEffect(() => {
+  //   setInfoata(FullData);
+  //   setFilterData(FilterData);
+  // }, []);
 
   return (
     <DataContext.Provider
       value={{
-        datat,
+        datatNew,
         setInfoata,
-        infoData,
-        setInfoData,
+        filterData,
+        setFilterData,
         setNameFilter,
         nameFilter,
       }}

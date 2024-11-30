@@ -10,7 +10,7 @@ import "./assets/App.css";
 import data from ".././public/data.json";
 import daataFilter from ".././public/filters.json";
 import information from ".././public/data.json";
-// import DataProvider, { DataContext } from "./contexts/DataContext";
+import { DataProvider } from "./contexts/DataContext";
 
 export const MyContext = createContext();
 function App() {
@@ -19,23 +19,14 @@ function App() {
   const [nameFilter, setNameFilter] = useState("");
 
   return (
-    <MyContext.Provider
-      value={{
-        datat,
-        setInfoata,
-        infoData,
-        setInfoData,
-        setNameFilter,
-        nameFilter,
-      }}
-    >
+    <DataProvider>
       <Router>
         <Header />
         <Routes className="HomeAppRouter">
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
-    </MyContext.Provider>
+    </DataProvider>
   );
 }
 

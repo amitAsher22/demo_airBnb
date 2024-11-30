@@ -1,16 +1,17 @@
-import { MyContext } from "../App";
 import React, { useContext } from "react";
 import imgIcon from "../assets/Logoweb.png";
 import "../assets/Header.css";
 // y
 
 import information from "../../public/data.json";
+import { DataContext } from ".././contexts/DataContext";
 
 function ImageIcon() {
-  const { setInfoData } = useContext(MyContext);
+  const { datatNew, setInfoata } = useContext(DataContext);
 
+  // function present all Array Of Objects
   const PresentFullData = () => {
-    setInfoData(information);
+    setInfoata(information);
   };
 
   return (

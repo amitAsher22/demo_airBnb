@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PresentDataFromJson from "../components/PresentDataFromJson";
 import IconFilter from "./IconFilter";
 import "../style/Homepage.css";
