@@ -11,3 +11,4 @@ use ⌨️ :
 -materialUi
 -react slick-carousel
 -swiper
+-reactjs-popup

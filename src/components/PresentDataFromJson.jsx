@@ -53,7 +53,7 @@ const PresentDataFromJson = () => {
               ))}
             </Swiper>
             <div className="card-info">
-              <span onClick={() => toggleLike(item.id)}>
+              <span className="LikeUnLike" onClick={() => toggleLike(item.id)}>
                 {item.like ? <FcLike /> : <IoMdHeartEmpty />}
               </span>
 

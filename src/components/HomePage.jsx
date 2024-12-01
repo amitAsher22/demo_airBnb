@@ -9,7 +9,6 @@ function HomePage() {
     <div className="MainDivHomePage">
       <IconFilter />
       <PresentDataFromJson />
-      <div>dsdsd</div>
     </div>
   );
 }
